@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <script >
+        function math()
+        {
+            a=document.getElementById("n1").value
+            b=Math.round(a)
+            c=Math.ceil(a)
+            d=Math.floor(a)
+            document.getElementById("round").value=b
+            document.getElementById("ceil").value=c
+            document.getElementById("floor").value=d
+
+        }
+        function len()
+        {
+            s=document.getElementById("str").value
+
+            l=s.length
+            document.getElementById("len").value=l
+
+            a=document.getElementById("slice1").value
+            b=document.getElementById("slice2").value
+            slice=s.slice(a,b)
+            document.getElementById("slice").value=slice
+
+            c=document.getElementById("substring1").value
+            d=document.getElementById("substring2").value
+            substring=s.substring(c,d)
+            document.getElementById("substring").value=substring
+
+            e=document.getElementById("substr1").value
+            f=document.getElementById("substr2").value
+            substr=s.substr(e,f)
+            document.getElementById("substr").value=substr
+
+            n=document.getElementById("rep1").value
+            m=document.getElementById("rep2").value
+            re=s.replace(n,m)
+            document.getElementById("rep").value=re
+
+            lower=s.toLocaleLowerCase();
+            document.getElementById("lower").value=lower
+            upper=s.toLocaleUpperCase();
+            document.getElementById("upper").value=upper
+
+            t=document.getElementById("str2").value
+
+            concat=s.concat(" ",t)
+            document.getElementById("con").value=concat
+
+        }</script>
+        <body style="background-color: blanchedalmond;"><center><table>
+    string:<input type="text" id="str"><br><hr><br>
+
+    length:<input type="number" id="len"><br><hr><br>
+
+    from:<input type="number" id="slice1">&nbsp;&nbsp;<br>to:<input type="number" id="slice2"><br>
+    slice:<input type="text" id="slice"><br><hr><br>
+
+    from:<input type="number" id="substring1">&nbsp;&nbsp;<br>to:<input type="number" id="substring2"><br>
+    substring:<input type="text" id="substring"><br><hr><br>
+
+    from:<input type="number" id="substr1">&nbsp;&nbsp;<br>to:<input type="number" id="substr2"><br>
+    substr:<input type="text" id="substr"><br><hr><br>
+
+    from:<input type="text" id="rep1">&nbsp;&nbsp;<br>to:<input type="text" id="rep2"><br>
+    replace:<input type="text" id="rep"><br><hr><br>
+
+    to lower:<input type="text" id="lower"><br>
+    to upper:<input type="text" id="upper"><br><hr><br>
+
+    string2:<input type="text" id="str2"><br><hr><br>
+
+    concat:<input type="text" id="con"><br><hr><br>
+
+    <button onmouseenter="len()">proceed</button>
+    <hr>
+    <hr>
+
+
+    number:<input type="number" id="n1"><br>
+    rounded:<input type="number" id="round"><br>
+    ceil:<input type="number" id="ceil"><br>
+    floor:<input type="number" id="floor"><br>
+<button onmouseenter="math()">proceed</button>
+</center></table> </body>
+    </html>
